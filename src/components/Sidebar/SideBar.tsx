@@ -18,7 +18,6 @@ const SiderBar: FC = () => (
     borderColor="teal.600"
     color="white"
     fontSize="2xl"
-    resize="horizontal"
     overflow="auto"
   >
     <Description />

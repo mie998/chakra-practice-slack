@@ -29,7 +29,7 @@ const Header: FC = () => (
       <MenuButton />
     </Flex>
 
-    <HStack mt={{ base: 4, md: 0 }}>
+    <HStack>
       <ArrowBackIcon />
       <ArrowForwardIcon />
       <TimeIcon />
@@ -37,7 +37,7 @@ const Header: FC = () => (
       <QuestionIcon />
     </HStack>
 
-    <HStack spacing="4" fontSize="2xl" mt={{ base: 4, md: 0 }}>
+    <HStack spacing="4" fontSize="2xl">
       <BsFillPersonFill />
       <MinusIcon />
       <SmallAddIcon />

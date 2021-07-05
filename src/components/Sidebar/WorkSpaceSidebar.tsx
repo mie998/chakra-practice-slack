@@ -17,7 +17,7 @@ const BiUserS: FC = () => (
 const WorkSpaceSidebar: FC = () => (
   <Stack
     as="nav"
-    height="100vh"
+    height="95vh"
     bg="teal.500"
     spacing="4"
     borderRight="1px"

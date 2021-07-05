@@ -12,31 +12,43 @@ import { FaLanguage } from 'react-icons/fa';
 import { GoMention } from 'react-icons/go';
 import { GrEmoji } from 'react-icons/gr';
 
-const InputArea: FC = () => (
-  <Stack
-    borderRadius="5"
-    border="2px"
-    borderColor="gray.400"
-    m="0 auto"
-    zIndex="sticky"
-    position="relative"
-    width="calc(100% * 9 / 10)"
-    bottom="50"
-  >
-    <Textarea border="none" resize="none" />
-    <HStack>
-      <HiOutlineLightningBolt />
-      <BiBold />
-      <BiItalic />
-      <BiStrikethrough />
-      <BiCodeAlt />
-      <BiLink />
-      <Spacer />
-      <FaLanguage />
-      <GoMention />
-      <GrEmoji />
-    </HStack>
-  </Stack>
-);
+const InputArea: FC = () => {
+  const handleReturn = () => {
+    console.log('handling');
+  };
+
+  return (
+    <Stack
+      borderRadius="5"
+      border="2px"
+      borderColor="gray.200"
+      m="0 auto"
+      zIndex="sticky"
+      position="relative"
+      width="calc(100% * 9 / 10)"
+      bottom="5"
+    >
+      <Textarea
+        placeholder="Message #general"
+        border="none"
+        resize="none"
+        size="xs"
+        onChange={() => handleReturn}
+      />
+      <HStack borderTop="2px" borderColor="gray.400" p="2" color="gray.600">
+        <HiOutlineLightningBolt />
+        <BiBold />
+        <BiItalic />
+        <BiStrikethrough />
+        <BiCodeAlt />
+        <BiLink />
+        <Spacer />
+        <FaLanguage />
+        <GoMention />
+        <GrEmoji />
+      </HStack>
+    </Stack>
+  );
+};
 
 export default InputArea;

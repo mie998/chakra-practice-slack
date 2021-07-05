@@ -21,6 +21,7 @@ const Header: FC = () => (
     wrap="wrap"
     padding={2}
     bg="teal.500"
+    height="5vh"
     color="white"
     borderBottom="1px"
     borderColor="teal.600"

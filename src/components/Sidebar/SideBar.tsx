@@ -12,7 +12,7 @@ const Description: FC = () => (
 const SiderBar: FC = () => (
   <Stack
     as="nav"
-    height="100vh"
+    height="95vh"
     bg="teal.500"
     borderRight="1px"
     borderColor="teal.600"

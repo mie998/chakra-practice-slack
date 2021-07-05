@@ -4,7 +4,7 @@ import { Box } from '@chakra-ui/react';
 const Resizer: FC = () => (
   <Box
     margin="0"
-    height="100vh"
+    height="95vh"
     width="3px"
     bg="cyan"
     cursor="col-resize"

@@ -35,7 +35,7 @@ const InputArea: FC = () => {
         size="xs"
         onChange={() => handleReturn}
       />
-      <HStack borderTop="2px" borderColor="gray.400" p="2" color="gray.600">
+      <HStack borderTop="2px" borderColor="gray.400" p="2" color="gray.500">
         <HiOutlineLightningBolt />
         <BiBold />
         <BiItalic />

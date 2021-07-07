@@ -43,6 +43,7 @@ module.exports = {
     'prettier',
     'react',
     'react-hooks',
+    'unused-imports',
   ],
   root: true,
   rules: {
@@ -72,7 +73,7 @@ module.exports = {
     indent: 'off',
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/prefer-interface': 'off',
 
     // airbnb
@@ -121,6 +122,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
     'react/default-props-match-prop-types': 'off',
+    'react/display-name': 'off',
 
     // react hooks
     'react-hooks/rules-of-hooks': 'error',
@@ -157,6 +159,7 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+    'unused-imports/no-unused-imports-ts': 'warn',
   },
   settings: {
     'import/parsers': {

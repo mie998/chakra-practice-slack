@@ -12,6 +12,7 @@ import {
 import { FaLanguage } from 'react-icons/fa';
 import { GoMention } from 'react-icons/go';
 import { GrEmoji } from 'react-icons/gr';
+import { useKey } from 'react-use';
 
 const AutoResizeTextArea = React.forwardRef((props, ref: any) => {
   return (
@@ -20,14 +21,13 @@ const AutoResizeTextArea = React.forwardRef((props, ref: any) => {
       overflow="hidden"
       resize="none"
       ref={ref}
-      minRows={1}
       placeholder="Message #general"
       border="none"
       size="xs"
       minHeight="10"
       maxHeight="120"
       _focus={{
-        boxShadow: '0 0 0 4px rgba(35, 167, 195, 0.3)',
+        boxShadow: 'none',
       }}
       {...props}
     />
@@ -35,7 +35,7 @@ const AutoResizeTextArea = React.forwardRef((props, ref: any) => {
 });
 
 const InputArea: FC = () => {
-  const ref = useRef<any>(null!);
+  const ref = useRef<any>(null);
   useEffect(() => {
     autosize(ref.current);
 
@@ -44,6 +44,16 @@ const InputArea: FC = () => {
       autosize.destroy(ref.current);
     };
   }, []);
+
+  const predicate = (event: KeyboardEvent) =>
+    event.ctrlKey && event.key === 'Enter';
+  useKey(
+    predicate,
+    () => {
+      console.log('handling...');
+    },
+    { event: 'keydown' }
+  );
 
   // const handleReturn = () => {
   //   console.log('handling');
